@@ -11,6 +11,12 @@
  rdns = false
  default_realm = <%= realmuppercase %>
  default_ccache_name = KEYRING:persistent:%{uid}
+ kdc_timesync = 1
+ ccache_type = 4
+ proxiable = true
+ fcc-mit-ticketflags = true
+ default_keytab_name = FILE:/etc/krb5.keytab
+
 
 [realms]
  <%= realmuppercase %> = {
